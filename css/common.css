@@ -1,0 +1,122 @@
+.sidebar {
+  position: sticky;
+  display: inline-block;
+  top: 170px;
+  padding-right: 40px;
+  transform: translateX(calc(-100% - 30px));
+  height: 65px;
+  overflow: hidden;
+  float: left;
+}
+
+.sidebar-h2 {
+  transform: translateY(101px);
+  transition: 0.2s;
+  width: 100%;
+  max-width: 150px;
+  margin-top: 7px;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  text-align: right;
+  opacity: 0;
+  color: #65bbf2;
+}
+
+.sidebar-h2.visible {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.2s;
+}
+
+
+main {
+  display: inline-block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section p {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  padding: 5px 10px;
+  background: linear-gradient(to right, #65bbf2 0%, transparent 100%);
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/*  Intro section  */
+.intro {
+  display: inline-block;
+  width: 100%;
+}
+
+.intro-avatar {
+  display: inline-block;
+  width: 160px;
+  float: left;
+  padding: 10px;
+  margin-right: 20px;
+  background:
+    linear-gradient(217deg, #81c8f5, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, #1899e9, rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(356deg, #86bddd, rgba(0, 0, 255, 0) 70.71%);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.avatar {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  float: left;
+}
+
+.intro-header {
+  display: inline-block;
+  width: calc(100% - 180px);
+}
+
+.intro-header .social {
+  margin-bottom: 15px;
+}
+
+.intro-content {
+  width: 100%;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.twitter svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  float: left;
+  position: relative;
+  top: 3px;
+}
+
+.twitter a {
+  text-decoration: none;
+  color: #949393;
+  display: inline-block;
+  line-height: 18px;
+  transition: 0.15s;
+}
+
+.twitter a:hover {
+  color: #65bbf2;
+  transition: 0.15s;
+}
+
+/*  Intro section END  */
