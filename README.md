@@ -1,3 +1,3 @@
-<h1>Yaroslav Tsiapych<h1>
+<h2>Yaroslav Tsiapych</h2>
 <a href='tsyaroslav.github.io/cv'>Curriculum Vitæ</a>
 
