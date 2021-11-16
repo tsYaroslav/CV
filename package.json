@@ -1,0 +1,11 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tsYaroslav/CV.git",
+  "author": "121yaroslav <yaroslav121mail@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "^2.4.1"
+  }
+}

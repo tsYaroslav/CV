@@ -1,76 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CV</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- styles -->    
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-  </head>
-  <body>
-        <main>
-      <div>
-        <aside class="sidebar">
-          <h2 class="sidebar-h2">Yaroslav Tsiapych</h2>
-          <div class="darkModeToggler toggler-trigger">
-            <label for="switch-input">
-              #for_lighthouse
-              <input type="checkbox" id="switch-input"/>
-              <span class="switch">
-               <span></span>
-               <span></span>
-               <span class="s"></span>
-              </span>
-            </label>
-          </div>          
-        </aside>
-        <div class="content">
 
-          <section class="intro">
-            <div class="intro-avatar">
-              <img src="img/avatar.jpg" width="140" height="140" class="avatar" alt="qwerty">
-            </div>
-            <div class="intro-header">
-              <h2>Yaroslav Tsiapych</h2>
-              <address>
-                <span>frontend developer</span>
-                <ul class="social">
-                  <li class="github">
-                    <a href="https://github.com/tsYaroslav" rel="author" >
-                      <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
-                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-                        </path>
-                      </svg>
-                      <span>tsYaroslav</span>
-                    </a>
-                  </li>
-                  <li class="linkedin">
-                    <a href="https://www.linkedin.com/in/yaroslav-ts/" rel="author">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" class="global-nav__logo">
-                    <g>
-                      <path d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z" fill="currentColor"></path>
-                      </g>
-                      </svg>
-                      <span>Yaroslav Tsiapych</span>
-                    </a>
-                  </li>
-                </ul>
-              </address>
-              <blockquote>
-                An
-              </blockquote>
-            </div>
-            <div class="intro-content section">
-              <p>
-              </p>
-            </div>
-          </section>
+<head>
+  <meta charset="UTF-8" />
+  <title>CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- some seo stuff -->
+  <meta name="description" content="CV">
+  <!-- favicon stuff -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/tsYaroslav/CV/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/tsYaroslav/CV/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/tsYaroslav/CV/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://github.com/tsYaroslav/CV/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="https://github.com/tsYaroslav/CV/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="https://github.com/tsYaroslav/CV/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- styles -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&display=swap"
+    rel="stylesheet">
+</head>
 
-
+<body>
+  <div class="preloader-w">
+    <div class="preloader-item"></div>
+  </div>
+  <main>
+    <div>
+      <aside class="sidebar">
+        <h2 class="sidebar-h2">Yaroslav Tsiapych</h2>
+        <div class="darkModeToggler toggler-trigger">
+          <label for="switch-input">
+            #for_lighthouse
+            <input type="checkbox" id="switch-input" />
+            <span class="switch">
+              <span></span>
+              <span></span>
+              <span class="s"></span>
+            </span>
+          </label>
         </div>
+      </aside>
+      <div class="content">
+
+        <section class="intro">
+          <div class="intro-avatar">
+            <img src="img/avatar.jpg" width="200" height="200" class="avatar" alt="qwerty">
+          </div>
+          <div class="intro-header">
+            <h2>Yaroslav Tsiapych</h2>
+            <address>
+              <span>Front-end developer</span>
+              <ul class="social">
+                <li class="link">
+                  <a href="https://github.com/tsYaroslav" rel="author">
+                    <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32"
+                      data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+                      <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z "
+                        fill="currentColor">
+                      </path>
+                    </svg>
+                    <span>tsYaroslav</span>
+                  </a>
+                </li>
+                <li class="link">
+                  <a href="https://www.linkedin.com/in/yaroslav-ts/" rel="author">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
+                      class="global-nav__logo">
+                      <g>
+                        <path
+                          d="M34,2.5v29A2.5,2.5,0,0,1,31.5,34H2.5A2.5,2.5,0,0,1,0,31.5V2.5A2.5,2.5,0,0,1,2.5,0h29A2.5,2.5,0,0,1,34,2.5ZM10,13H5V29h5Zm.45-5.5A2.88,2.88,0,0,0,7.59,4.6H7.5a2.9,2.9,0,0,0,0,5.8h0a2.88,2.88,0,0,0,2.95-2.81ZM29,19.28c0-4.81-3.06-6.68-6.1-6.68a5.7,5.7,0,0,0-5.06,2.58H17.7V13H13V29h5V20.49a3.32,3.32,0,0,1,3-3.58h.19c1.59,0,2.77,1,2.77,3.52V29h5Z"
+                          fill="currentColor"></path>
+                      </g>
+                    </svg>
+                    <span>Yaroslav Tsiapych</span>
+                  </a>
+                </li>
+              </ul>
+            </address>
+        </section>
+
+        <section class="section timelines">
+          <h2 class="section-title">Timeline</h2>
+          <div class="timeline">
+            <h3 class="timeline-title">Education</h3>
+            <ul class="timeline-ul">
+              <li>
+                <p><span class="timeline-date">[2015]</span> Graduated from LNTU with a bachelor's degree in computer
+                  engineering.</p>
+              </li>
+              <li>
+                <p><span class="timeline-date">[2017]</span> Received a master's degree in computer systems and networks
+                  at LNTU.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="timeline">
+            <h3 class="timeline-title">Career</h3>
+            <ul class="timeline-ul">
+              <li>
+                <p><span class="timeline-date">[2015]</span> In 2015 started internship at Infostyle Agency as trainee
+                  html coder (5 months). Studied to create an html templates for Themeforest (Envato Market).
+                </p>
+              </li>
+              <li>
+                <p><span class="timeline-date">[2015]</span> Became a junior html coder at Dreamext web studio. Worked
+                  on creating an html pages by using standard HTML, CSS, JS practices (2 months).</p>
+              </li>
+              <li>
+                <p><span class="timeline-date">[2016]</span> In 2016 got hired at Welard web studio as an html coder.
+                  Worked on creating a website layout/user interface by using standard HTML, CSS, JS practices (5 years
+                  4 months).</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section skills">
+          <h2 class="section-title">Hard skills</h2>
+          <p>Here it is a list of hard skills:</p>
+          <div class="skills-table">
+            <div class="skills-colunm">
+              <div class="skills-colunm-caption">Layout & Markup</div>
+              <div class="skills-colunm-body">
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">SCSS</span>
+                <span class="skill-item">SVG</span>
+                <span class="skill-item">BEM</span>
+                <span class="skill-item">Responsive design</span>
+              </div>
+            </div>
+            <div class="skills-colunm">
+              <div class="skills-colunm-caption">Javascript & Tools</div>
+              <div class="skills-colunm-body">
+                <span class="skill-item">Javascript</span>
+                <span class="skill-item">jQuery</span>
+                <span class="skill-item">Gulp</span>
+                <span class="skill-item">React (beginner)</span>
+                <span class="skill-item">CRA</span>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">Npm/Yarn</span>
+                <span class="skill-item">Node.js</span>
+                <span class="skill-item">VS Code</span>
+
+              </div>
+            </div>
+            <div class="skills-colunm">
+              <div class="skills-colunm-caption">Graphic Design Tools</div>
+              <div class="skills-colunm-body">
+                <span class="skill-item">Photoshop</span>
+                <span class="skill-item">Illustrator</span>
+                <span class="skill-item">Figma</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Certifications</h2>
+          <p>Has successfully completed the EF SET Certificate and has earned the English level 64/100 on the EF SET
+            score scale and C1 Advanced according to the Common European Framework of Reference (CEFR). The EF SET score
+            is calculated as an average of the reading and listening scores. <span class="link text-link"><a
+                href="https://www.efset.org/cert/msm623"><span>See credential.</span></a></span></p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Interests & Hobbies</h2>
+          <p>Interested in popular science videos. My hobbies are cycling and photography.</p>
+        </section>
+
+        <section class="section end">
+          <h2>That's pretty much it. ¯\_(ツ)_/¯</h2>
+        </section>
+
       </div>
-    </main>  
-    <script src="js/common.js"></script>
-  </body>
-  </html>
+    </div>
+  </main>
+
+  <audio class='toggler-sound hidden'>
+    <source src="media/toggler.mp3">
+  </audio>
+
+  <script src="js/common.js"></script>
+</body>
+
+</html>

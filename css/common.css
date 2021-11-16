@@ -1,3 +1,112 @@
+/*  some basic typography presets  */
+
+* {
+  font: 400 16px/28px 'Open Sans', Helvetica, sans-serif;
+}
+
+::-moz-selection {
+  /*  Code for Firefox  */
+  color: #fff;
+  background: #65bbf2;
+}
+
+::selection {
+  color: #fff;
+  background: #65bbf2;
+}
+
+body {
+  background: #fff;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font: 700 24px/34px 'Open Sans', sans-serif;
+  color: #404040;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16.67px;
+}
+
+blockquote {
+  font: italic 300 18px/24px 'Open Sans', sans-serif;
+}
+
+p {
+  font-size: 16.67px;
+  text-indent: 0px;
+}
+
+li p {
+  text-indent: 0;
+}
+
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*  Preloader  */
+
+.preloader-w {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1001;
+}
+
+.dark-mode .preloader-w {
+  background: #15202b;
+}
+
+.preloader-item {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loaded-hiding .preloader-w {
+  transition: 0.5s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader-w {
+  display: none;
+}
+
+/*  Preloader END  */
+
+article {
+  position: relative;
+}
+
 .sidebar {
   position: sticky;
   display: inline-block;
@@ -13,7 +122,7 @@
   transform: translateY(101px);
   transition: 0.2s;
   width: 100%;
-  max-width: 150px;
+  max-width: 200px;
   margin-top: 7px;
   text-overflow: ellipsis;
   line-height: 20px;
@@ -28,6 +137,157 @@
   transition: 0.2s;
 }
 
+/*  Dark mode toggler  */
+.sidebar .darkModeToggler {
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.sidebar .darkModeToggler *:hover {
+  cursor: pointer;
+}
+
+label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  --c: translate(-50%, -50%);
+
+  transform: var(--c);
+  font-size: 0;
+  line-height: 0;
+}
+
+.switch {
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.darkModeToggler label > input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  opacity: 0;
+}
+
+.darkModeToggler .switch .s {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: var(--c);
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  background: #ffac33;
+  border: 5px solid white;
+  transition: all ease 0.15s;
+}
+
+.darkModeToggler .switch span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.darkModeToggler .switch span::before,
+.darkModeToggler .switch span::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: var(--c);
+  background: #65bbf2;
+  width: 12%;
+  height: 130%;
+  border-radius: 10px;
+  transition: all ease 0.15s;
+}
+
+.darkModeToggler .switch span:nth-child(1)::before {
+  transform: var(--c) rotate(0deg);
+}
+
+.darkModeToggler .switch span:nth-child(1)::after {
+  transform: var(--c) rotate(45deg);
+}
+
+.darkModeToggler .switch span:nth-child(2)::before {
+  transform: var(--c) rotate(90deg);
+}
+
+.darkModeToggler .switch span:nth-child(2)::after {
+  transform: var(--c) rotate(135deg);
+}
+
+.darkModeToggler .switch::before,
+.switch::after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: var(--c);
+  border-radius: 50%;
+  background: white;
+  transition: all ease 0.15s;
+}
+
+.darkModeToggler .switch::before {
+  width: 0%;
+  height: 0%;
+  z-index: 10;
+}
+
+.darkModeToggler .switch::after {
+  width: 50%;
+  height: 50%;
+}
+
+.darkModeToggler input:checked ~ .switch .s {
+  width: 100%;
+  height: 100%;
+  background: #65bbf2;
+}
+
+.darkModeToggler input:checked ~ .switch span::before,
+.darkModeToggler input:checked ~ .switch span::after {
+  height: 50%;
+}
+
+.dark-mode .darkModeToggler .switch::before,
+.dark-mode .switch::after {
+  background: #15202b;
+}
+
+.darkModeToggler input:checked ~ .switch::before {
+  left: 30%;
+  top: 30%;
+  width: 62%;
+  height: 80%;
+}
+
+.darkModeToggler input:checked ~ .switch::after {
+  width: 0%;
+  height: 0%;
+}
+
+.darkModeToggler input:not(:checked) ~ .switch {
+  transition: all ease 2.15s 0.1s;
+}
+
+/*  Dark mode toggler end  */
 
 main {
   display: inline-block;
@@ -40,7 +300,14 @@ main {
 }
 
 .section {
-  margin-bottom: 40px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.section > * {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .section p {
@@ -59,6 +326,7 @@ main {
 .intro {
   display: inline-block;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .intro-avatar {
@@ -89,6 +357,7 @@ main {
 
 .intro-header .social {
   margin-bottom: 15px;
+  margin-top: 5px;
 }
 
 .intro-content {
@@ -97,7 +366,7 @@ main {
   margin-top: 20px;
 }
 
-.twitter svg {
+.link svg {
   width: 20px;
   height: 20px;
   margin-right: 5px;
@@ -106,7 +375,7 @@ main {
   top: 3px;
 }
 
-.twitter a {
+.link a {
   text-decoration: none;
   color: #949393;
   display: inline-block;
@@ -114,9 +383,352 @@ main {
   transition: 0.15s;
 }
 
-.twitter a:hover {
+.link a:hover {
   color: #65bbf2;
   transition: 0.15s;
 }
 
+.text-link a {
+  display: inline;
+}
+
 /*  Intro section END  */
+
+/*  Timeline  */
+
+/*  Time line circle animation  */
+@keyframes timelineCircleScale {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+/*  Time line circle animation  END  */
+.timeline {
+  padding: 0 10px;
+}
+
+.timeline-ul {
+  margin-left: 25px;
+}
+
+.timeline-ul li {
+  position: relative;
+  margin: 10px 0;
+}
+
+.timeline .timeline-title {
+  display: inline-block;
+  color: #65bbf2;
+}
+
+.timeline .timeline-title::after {
+  content: "";
+  display: block;
+  width: 0%;
+  background: #65bbf2;
+  height: 2px;
+  transition: 0.25s;
+}
+
+.dark-mode .timeline-title::after {
+  background: #fff;
+}
+
+.timeline:hover .timeline-title::after {
+  width: 100%;
+  transition: 0.2s;
+}
+
+.timeline-ul li::before,
+.timeline-ul li::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  background: #e3e3e3;
+  margin: 0;
+  position: absolute;
+  height: 100%;
+  top: 20px;
+  left: -20px;
+}
+
+.timeline-ul li::after {
+  height: 12px;
+  width: 12px;
+  background: #65bbf2;
+  top: 9px;
+  left: -25px;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: 0.2s;
+}
+
+.timeline-ul li:hover::before {
+  background: #65bbf2;
+  transition: 0.2s;
+}
+
+.timeline-ul li:hover::after {
+  background: #65bbf2;
+  animation: timelineCircleScale 0.5s;
+  transform: scale(1.3);
+  transition: 0.2s;
+}
+
+.timeline-date {
+  position: relative;
+  padding: 2px 5px;
+  transition: 0.2s;
+  left: -4px;
+  margin-right: -4px;
+}
+
+.timeline-ul li .timeline-date::before {
+  content: "";
+  width: 0;
+  display: inline-block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 100%;
+  background: #65bbf2;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.timeline-ul li:hover .timeline-date::before {
+  width: 100%;
+  transition: 0.2s;
+}
+
+.timeline-ul li:hover .timeline-date {
+  color: #fff;
+  transition: 0.2s;
+}
+
+.timeline-ul li:last-child::before,
+.timeline-ul li:only-child::before {
+  display: none;
+}
+
+.skills-table {
+    display: inline-block;
+}
+
+
+.skills-table .skills-colunm  {
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+.skills-table .skills-colunm:nth-child(3n) {
+    padding-right: 0px;
+}
+
+.skills-table .skills-colunm:nth-child(3n+1) {
+  clear:  left;
+}
+
+.skills-colunm-caption {
+  margin-bottom: 10px;
+}
+
+.skills-table .skill-item {
+    background: #65bbf2;
+    padding: 2px 10px;
+    border-radius: 25px;
+    margin: 0 4px 8px 0px;
+    display: inline-block;
+    color: #ffffff;
+}
+
+/*  Timeline End  */
+
+section.end.section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.end h2 {
+  font: italic 100 15px/20px 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+/*  Dark mode  */
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode .intro-header,
+.dark-mode .intro-header a,
+.dark-mode .skills-colunm-caption {
+  color: #fff;
+}
+
+body.dark-mode {
+  background: #15202b;
+}
+
+.dark-mode .sidebar-h2 {
+  color: #65bbf2;
+}
+
+.dark-mode .timeline-title {
+  color: #fff;
+}
+
+.dark-mode .darkModeToggler .switch span {
+  border-color: #15202b;
+}
+
+.dark-mode .link a:hover span,
+.dark-mode .link a:hover svg {
+  color: #65bbf2;
+  fill: #65bbf2;
+  transition: 0.15s;
+}
+
+/*  Dark mode END */
+
+/*  MEDIA QUERIES  */
+
+/*  Custom scrollbar for desktops (ipads excluded) query  */
+@media screen and (min-width: 1024px), (min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 5px;
+  }
+
+  body::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #65bbf2;
+    border-radius: 0;
+    border-radius: 8px;
+    border: 4px solid #fff;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  .dark-mode::-webkit-scrollbar-track {
+    background-color: #15202b;
+  }
+
+  .dark-mode::-webkit-scrollbar-thumb {
+    border: 4px solid #15202b;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .sidebar-h2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  * {
+    text-align: justify;
+  }
+
+  main {
+    padding: 40px 20px;
+  }
+
+  .intro-avatar {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+  }
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translateX(0%);
+    top: initial;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    background: #fff;
+    z-index: 999;
+    border-top: 2px solid #e3e3e3;
+  }
+
+  .dark-mode .sidebar {
+    border-color: #65bbf2;
+    background: #15202b;
+  }
+
+  .sidebar .darkModeToggler {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .intro-header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro-header * {
+    text-align: center;
+  }
+
+  .timeline-ul li .timeline-date::before {
+    width: 100%;
+  }
+
+  .timeline-ul li .timeline-date {
+    color: #fff;
+  }
+
+  .skills-table .skills-colunm {
+    width: 50%;
+  }
+  .skills-colunm-body {
+    text-align: left;
+  }
+
+  .skills-table .skills-colunm:nth-child(3n) {
+    padding-right: 20px;
+  }
+  
+  .skills-table .skills-colunm:nth-child(2n) {
+      padding-right: 0px;
+  }
+
+  .skills-table .skills-colunm:nth-child(2n+1) {
+    clear: left;
+  }
+
+  .skills-table .skills-colunm:nth-child(3n+1) {
+    clear: initial;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .skills-table .skills-colunm {
+    width: 100%;
+    padding-right: 0;
+   }
+}
